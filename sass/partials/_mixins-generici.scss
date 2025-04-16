@@ -3,3 +3,20 @@
   box-shadow: $boxShadow;
   border: $border;
 }
+
+$text-time: surprise 2s;
+$img-time: surprise 4s;
+$cards-time: surprise 6s;
+
+@mixin comparsa($height) {
+  @keyframes surprise {
+    0% {
+      transform: translate(0px, $height);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0px);
+      opacity: 1;
+    }
+  }
+}

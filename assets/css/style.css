@@ -134,10 +134,16 @@ header {
   width: 100%;
 }
 header nav {
+  background-color: #b075f4;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+header nav p {
+  font-size: 19px;
+}
+header nav p:first-of-type {
+  margin-left: 70rem;
 }
 header nav img {
   width: 70px;
@@ -156,6 +162,7 @@ header nav img {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  animation: surprise 2s;
 }
 #hero #heading h1 {
   font-family: "Spectral", serif;
@@ -172,9 +179,20 @@ header nav img {
 #hero #heading button:hover {
   background-color: #b075f4;
 }
+@keyframes surprise {
+  0% {
+    transform: translate(0px, -20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
 #hero #imgContainer {
   width: 300px;
   height: 100%;
+  animation: surprise 4s;
 }
 #hero #imgContainer img {
   width: 100%;
@@ -185,18 +203,19 @@ header nav img {
   -o-object-fit: contain;
      object-fit: contain;
 }
-
-#heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#heading p {
-  font-size: 19px;
+@keyframes surprise {
+  0% {
+    transform: translate(0px, -20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
 }
 
 #cards {
+  background-color: #640fc5;
   display: flex;
   justify-content: space-evenly;
 }
@@ -208,4 +227,15 @@ header nav img {
   border: 0;
   -o-object-fit: contain;
      object-fit: contain;
+  animation: surprise 6s;
+}
+@keyframes surprise {
+  0% {
+    transform: translate(0px, -20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

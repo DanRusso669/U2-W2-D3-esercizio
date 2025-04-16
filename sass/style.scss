@@ -9,11 +9,17 @@
 header {
   width: 100%;
   & nav {
+    background-color: scale-color($bg-hero, $lightness: 50%);
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 
+    align-items: center;
+    & p {
+      font-size: $fs-xl;
+      &:first-of-type {
+        margin-left: 70rem;
+      }
+    }
     & img {
       width: 70px;
       height: 100px;
@@ -43,6 +49,8 @@ header {
         background-color: scale-color($bg-hero, $lightness: 50%);
       }
     }
+    @include comparsa(-20px);
+    animation: $text-time;
   }
   & #imgContainer {
     width: 300px;
@@ -53,20 +61,13 @@ header {
       @include floating();
       object-fit: contain;
     }
-  }
-}
-
-#heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  & p {
-    font-size: $fs-xl;
+    @include comparsa(-20px);
+    animation: $img-time;
   }
 }
 
 #cards {
+  background-color: $bg-hero;
   display: flex;
   justify-content: space-evenly;
   & img {
@@ -74,5 +75,7 @@ header {
     height: 100%;
     @include floating(20px, 0 0 40px, 0);
     object-fit: contain;
+    @include comparsa(-20px);
+    animation: $cards-time;
   }
 }
