@@ -1,0 +1,17 @@
+$font-sanserif: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$font-serif: "Spectral", serif;
+
+$fs-sm: 11px;
+$fs-ms: 13px;
+$fs-lg: 16px;
+$fs-xl: 19px;
+$fs-xxl: 24px;
+$fs-xxxl: 32px;
+$fs-title: 64px;
+
+@mixin title() {
+  font: {
+    family: $font-serif;
+    size: $fs-title;
+  }
+}

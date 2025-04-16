@@ -1,0 +1,29 @@
+$spaces: (
+  sm: 0.25rem,
+  normal: 0.5rem,
+  md: 1rem,
+  lg: 1.5rem,
+  xl: 2rem,
+  xxl: 3rem,
+);
+
+@each $key, $value in $spaces {
+  .p-block-#{$key} {
+    padding-block: $value;
+  }
+}
+@each $key, $value in $spaces {
+  .p-inline-#{$key} {
+    padding-inline: $value;
+  }
+}
+@each $key, $value in $spaces {
+  .m-block-#{$key} {
+    margin-block: $value;
+  }
+}
+@each $key, $value in $spaces {
+  .m-inline-#{$key} {
+    margin-inline: $value;
+  }
+}
