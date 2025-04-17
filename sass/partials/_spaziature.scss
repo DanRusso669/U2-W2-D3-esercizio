@@ -1,3 +1,4 @@
+$directions: block, inline;
 $spaces: (
   sm: 0.25rem,
   normal: 0.5rem,
@@ -8,22 +9,40 @@ $spaces: (
 );
 
 @each $key, $value in $spaces {
+  @each $dir in $directions {
+    .padding-#{$dir}-#{$key} {
+      padding-#{$dir}: #{$value};
+    }
+    .margin-#{$dir}-#{$key} {
+      margin-#{$dir}: #{$value};
+    }
+  }
   .p-block-#{$key} {
     padding-block: $value;
   }
-}
-@each $key, $value in $spaces {
   .p-inline-#{$key} {
     padding-inline: $value;
   }
-}
-@each $key, $value in $spaces {
+  .m-inline-#{$key} {
+    margin-inline: $value;
+  }
   .m-block-#{$key} {
     margin-block: $value;
   }
 }
-@each $key, $value in $spaces {
-  .m-inline-#{$key} {
-    margin-inline: $value;
-  }
-}
+
+// @each $key, $value in $spaces {
+//   .p-inline-#{$key} {
+//     padding-inline: $value;
+//   }
+// }
+// @each $key, $value in $spaces {
+//   .m-block-#{$key} {
+//     margin-block: $value;
+//   }
+// }
+// @each $key, $value in $spaces {
+//   .m-inline-#{$key} {
+//     margin-inline: $value;
+//   }
+// }

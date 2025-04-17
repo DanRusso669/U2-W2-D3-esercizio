@@ -4,9 +4,9 @@
   border: $border;
 }
 
-$text-time: surprise 2s;
-$img-time: surprise 4s;
-$cards-time: surprise 6s;
+$text-time: surprise 2s 1s both;
+$img-time: surprise 4s 2s both;
+$cards-time: surprise 6s 2.5s both;
 
 @mixin comparsa($height) {
   @keyframes surprise {
